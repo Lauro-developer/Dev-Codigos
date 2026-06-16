@@ -4,7 +4,17 @@
     margin: 0;
     padding: 0;
 }
-
+html, body {
+    min-height: 100vh;
+    background: #0f0c29;
+    overflow-x: hidden;
+}
+body{
+    min-height: 100vh;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -70,12 +80,8 @@ a:hover{
 }
 
 main{
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-    height: 100%;
-    width: 100%;
     min-height: 100vh;
+    width: 100%;
     padding-top:20px;
 }
 main .cad-sobre-mim, 
@@ -103,7 +109,19 @@ main .cad-sobre-informacoes {
 
 
 
-@media (max-width: 999px){
+@media (max-width: 800px){
+    
+
+    .frase {
+        font-family: "Black Ops One", system-ui;
+        color: #ffffff;
+        font-size: 14px;
+        position: absolute;
+        left: 38%;
+        transform: translateX(-50%);
+    }
+    
+    
     .nav-list{
     position: absolute;
         top: 8vh;
@@ -140,7 +158,7 @@ footer .p{
 .cad-sobre-projetos, 
 .cad-sobre-informacoes {
     padding: 70px 100px;
-    margin-bottom: 100px;
+    margin: 40px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -172,3 +190,5 @@ footer .p{
     justify-content: space-around;
     align-items: center;
 }
+
+
