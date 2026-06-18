@@ -126,7 +126,7 @@ main .cad-sobre-informacoes {
     white-space: nowrap;
 }
 
-@media (max-width: 999px){
+@media (max-width: 844px){
     .frase {
         font-family: "Black Ops One", system-ui;
         color: #ffffff;
