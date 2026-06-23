@@ -42,32 +42,44 @@ a {
 a:hover {
     color: rgba(64, 121, 237, 0.751);
     opacity: 0.8;
-    font-weight: 800;
-    font-size: medium;
+    font-weight: 700;
+    font-size:small;
     background-color: rgba(255, 255, 255, 0);
 }
 
-/* INICIO TOP BARRA DE NAVEGACAO */
+/* ================================
+   INICIO TOP BARRA DE NAVEGACAO
+   BASE = MOBILE
+================================ */
 nav {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #23232e;
-    height: 8vh;
-    padding-left: 30px;
+    height: auto;
+    padding: 10px;
     position: relative;
+    gap: 8px;
 }
 
 .nav-list {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
 }
 
 .nav-list li {
     letter-spacing: 2px;
-    margin-left: 32px;
-    padding-right: 15px;
+    margin-left: 0;
+    padding-right: 0;
     white-space: nowrap;
 }
 
@@ -86,16 +98,15 @@ nav {
 
 .avatar p {
     color: #ffff;
-    font-size: medium;
-    font-style: italic;
     font-size: 14px;
+    font-style: italic;
     font-weight: bold;
     transition: none;
 }
 
 .avatar img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     vertical-align: middle;
     transition: 0.5s;
@@ -109,7 +120,7 @@ nav {
 #texto-nome {
     color: #c3c2c2;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-family: "Bebas Neue", sans-serif;
 }
@@ -117,15 +128,18 @@ nav {
 .frase {
     font-family: "Black Ops One", system-ui;
     color: #ffffff;
-    font-size: 14px;
-    position: absolute;
-    left: 48%;
-    transform: translateX(-48%);
+    font-size: 12px;
+    position: static;
+    transform: none;
+    text-align: center;
 }
 
 /* FIM TOP BARRA DE NAVEGACAO */
 
-/* INICIO SETTINGS DOS CARDS */
+/* ================================
+   INICIO SETTINGS DOS CARDS
+   BASE = MOBILE
+================================ */
 main {
     min-height: 100vh;
     width: 100%;
@@ -137,11 +151,10 @@ main .cad-sobre-habilidades,
 main .cad-sobre-projetos,
 main .cad-sobre-informacoes {
     background-color: rgba(35, 35, 46, 0.8);
-    padding: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding: 20px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: #ffff;
-    padding: 20px 20px;
 }
 
 .cad-sobre-mim,
@@ -149,22 +162,22 @@ main .cad-sobre-informacoes {
 .cad-sobre-projetos,
 .cad-sobre-informacoes {
     min-height: 300px;
-    padding: 70px 100px;
-    margin: 40px auto;
+    padding: 40px 20px;
+    margin: 20px auto;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.9s;
-    font-size: large;
+    font-size: medium;
     text-align: justify;
 }
 
 #sobre_habilidades_card {
     text-align: center;
     font-weight: 800;
-    font-size: large;
+    font-size: medium;
     color: #85adad;
 }
 
@@ -175,7 +188,6 @@ main .cad-sobre-informacoes {
     color: #ffff;
     border-radius: 20px;
     transition: opacity 150ms ease, font-weight 150ms, 0.5s;
-
 }
 
 .cad-sobre-projetos h1,
@@ -210,11 +222,12 @@ main .cad-sobre-informacoes {
 
 #sobre_projetos_card {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 60px 60px;
+    padding: 0 10px 30px;
+    gap: 20px;
 }
 
 #sobre_projetos_card h1 {
@@ -238,14 +251,14 @@ iframe {
 }
 
 #projeto01 iframe {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 280px;
 }
 
 #projeto02 iframe {
     background-color: #ffffff;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 280px;
 }
 
 .botoes {
@@ -269,8 +282,215 @@ iframe {
 
 /* FIM SETTINGS DOS CARDS */
 
-/* INICIO RODAPÉ */
+/* ================================
+   INICIO RODAPÉ
+================================ */
 footer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffff;
+    background-color: #23232e;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    font-size: 14px;
+    align-items: center;
+    margin: 5px;
+}
+
+/* FIM RODAPÉ */
+
+/* TABLET = 768px */
+@media (min-width: 768px) {
+
+   nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding-left: 30px;
+    position: relative;
+}
+    .nav-list {
+    list-style: none;
+    display: flex;
+}
+
+    .nav-list li {
+    letter-spacing: 2px;
+    margin-left: 32px;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+    .frase {
+        position:relative;
+        left: 20%;
+        transform: translateX(-48%);
+        font-size: 14px;
+    }
+
+    main .cad-sobre-mim,
+    main .cad-sobre-habilidades,
+    main .cad-sobre-projetos,
+    main .cad-sobre-informacoes {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 40px 60px;
+    }
+
+    .cad-sobre-mim,
+    .cad-sobre-habilidades,
+    .cad-sobre-projetos,
+    .cad-sobre-informacoes {
+        padding: 50px 60px;
+        margin: 30px auto;
+        font-size: large;
+    }
+
+    #sobre_projetos_card {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px 40px;
+    }
+
+    #projeto01 iframe {
+        width: 380px;
+        height: 380px;
+    }
+
+    #projeto02 iframe {
+        width: 380px;
+        height: 380px;
+    }
+    a:hover {
+    color: rgba(64, 121, 237, 0.751);
+    opacity: 0.8;
+    font-weight: 700;
+    font-size:medium;
+    background-color: rgba(255, 255, 255, 0);
+}
+}
+
+/* ================================
+   DESKTOP = 1024px+
+================================ */
+@media (min-width: 1024px) {
+    nav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 8vh;
+        padding-left: 30px;
+        position: relative;
+}
+
+    .nav-list {
+        justify-content: end;
+        margin: 10px;
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-list li {
+        letter-spacing: 2px;
+        margin-left: 3px;
+        padding-right: 1px;
+        white-space: nowrap;
+    }
+
+    .avatar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+    }   
+
+    .avatar-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .avatar p {
+        color: #ffff;
+        font-size: medium;
+        font-style: italic;
+        font-size: 14px;
+        font-weight: bold;
+        transition: none;
+    }
+
+    .avatar img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        vertical-align: middle;
+        transition: 0.5s;
+    }
+
+    .avatar img:hover {
+        width: 66px;
+        height: 66px;
+    }
+
+    #texto-nome {
+        color: #c3c2c2;
+        white-space: nowrap;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: "Bebas Neue", sans-serif;
+    }
+
+    .frase {
+        font-family: "Black Ops One", system-ui;
+        color: #ffffff;
+        font-size: 14px;
+        position: absolute;
+        left: 42%;
+        transform: translateX(-48%);
+    }
+    main .cad-sobre-mim,
+    main .cad-sobre-habilidades,
+    main .cad-sobre-projetos,
+    main .cad-sobre-informacoes {
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px 20px;
+    }
+
+    .cad-sobre-mim,
+    .cad-sobre-habilidades,
+    .cad-sobre-projetos,
+    .cad-sobre-informacoes {
+        padding: 70px 100px;
+        margin: 40px auto;
+        font-size: large;
+    }
+
+    #sobre_projetos_card {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 60px 60px;
+    }
+
+    #projeto01 iframe {
+        width: 500px;
+        height: 500px;
+    }
+
+    #projeto02 iframe {
+        width: 500px;
+        height: 500px;
+    }
+
+    footer {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #ffff;
     background-color: #23232e;
@@ -279,113 +499,14 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: center;
-}
-
-footer p {
-    font-size: 14px;
-    margin: 5px;
-}
-
-/* FIM RODAPÉ */
-
-/*PARTE DA RESPONSIVIDADE = TEM QUE AJUSTAR E APRENDER*/
-@media (max-width: 844px) {
-    .frase {
-        font-family: "Black Ops One", system-ui;
-        color: #ffffff;
-        font-size: 13px;
-        font-weight: 900;
-        text-align: center;
-        position: relative;
-        padding-top: 14px;
-        left: 30%;
-        transform: translateX(-50%);
-    }
-
-    nav {
-        height: 10vh;
-        padding-left: 30px;
-        display: flex;
-        justify-content: end;
-        align-items: self-start;
-    }
-
-    .nav-list {
-        position: absolute;
-        top: -8vh;
-        right: 50px;
-        width: 75vw;
-        height: 29vh;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 1px;
-    }
-
-    .nav-list a {
-        font-weight: 900;
-        font-size: 15px;
-    }
-
-    .nav-list li {
-        padding-top: 30px;
-        margin-left: 2px;
-    }
-
-    .avatar-container {
-        padding-top: 2px;
-        display: flex;
-        align-items: center;
-        margin-left: -20px;
-        gap: 20px;
-    }
-
-    .avatar img {
-        width: 55px;
-        height: 55px;
-    }
-
-    .avatar img:hover {
-        width: 60px;
-        height: 60px;
-    }
-
-    #texto-nome {
-        font-size: 23px;
-        margin-left: -10px;
-    }
-
-    main .cad-sobre-mim,
-    main .cad-sobre-habilidades,
-    main .cad-sobre-projetos,
-    main .cad-sobre-informacoes {
-        margin: 20px;
-        height: 500px;
-    }
-
-    .cad-sobre-mim p {
-        font-size: 13px;
-    }
-
-    .redes {
-        width: 10px;
-    }
-
-    aside a {
-        margin-left: 10vh;
-    }
-
-    footer {
-        flex-wrap: wrap;
     }
 
     footer p {
-        text-align: center;
-        flex-wrap: wrap;
+        font-size: 14px;
+        margin: 5px;
     }
 
-    .email-link {
-        margin-left: 3vh;
-    }
-
+    a:hover {
+    font-size:medium;
+}
 }
